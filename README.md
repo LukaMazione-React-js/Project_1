@@ -1,4 +1,4 @@
-# Project_1
+**Project_1**
 # Personal CV Display App
 ## Overview
 This project is a simple yet effective React application designed to display a personal Curriculum Vitae (CV) in a web format. Developed as my first project, it showcases basic skills in TypeScript, the use of JSX for templating, and the power of array mapping to render lists. The application presents personal details, a snapshot of professional experience, and educational background.
