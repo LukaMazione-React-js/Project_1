@@ -25,11 +25,12 @@ const experience: Experience[] = [
     description:
       'Service engineer specializing in Palfinger cranes, power access equipment, and plant machinery. Proficient in the installation, maintenance, and repair of hydraulic lifting and access systems. Experienced in conducting safety inspections and ensuring compliance with industry standards for a wide range of construction and industrial machinery.',
     start_year: 2010,
-  }
-]
+  },
+];
 
 const myCV: CV_Data = {
-  photo: 'https://cdn.pixabay.com/photo/2015/03/09/20/04/programmer-666237_1280.jpg',
+  photo:
+    'https://cdn.pixabay.com/photo/2015/03/09/20/04/programmer-666237_1280.jpg',
   name: 'Lukasz',
   lastName: 'Mazurek',
   position: 'Junior Full Stack Developer - to be :)',
@@ -39,10 +40,40 @@ const myCV: CV_Data = {
     'Automotive Technical School in Lublin - Vehicle and Machinery Service and Repair',
     'Vocational School - Locksmith, Welder',
   ],
-}
+};
 console.log(myCV.experience);
 
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode></React.StrictMode>,
+  <React.StrictMode>
+    <main>
+      <aside>
+        <h2>Personal Data</h2>
+        <img
+          src={myCV.photo}
+          alt={`${myCV.name} ${myCV.lastName} profile photo`}
+        />
+        <p>
+          {myCV.name} {myCV.lastName}
+        </p>
+        <small>{myCV.position}</small>
+      </aside>
+      <section>
+        <h2>Experience</h2>
+        <ul>
+          {myCV.experience.map((experience) => (
+            <li key={experience.start_year}>
+              <strong>{experience.start_year}</strong> -{' '}
+              {experience.description}
+            </li>
+          ))}
+        </ul>
+        <h2>Education</h2>
+        <ul>
+          {myCV.education.map((education, index) => (
+            <li key={index}>{education}</li>
+          ))}
+        </ul>
+      </section>
+    </main>
+  </React.StrictMode>,
 );
