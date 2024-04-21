@@ -45,10 +45,14 @@ console.log(myCV.experience);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <main>
-      <aside>
+    <main className='cv'>
+      <header className='cv__header'>
+        <h1>CV</h1>
+      </header>
+      <aside className='cv__personal'>
         <h2>Personal Data</h2>
         <img
+          className='cv__personal-myPhoto'
           src={myCV.photo}
           alt={`${myCV.name} ${myCV.lastName} profile photo`}
         />
@@ -57,7 +61,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </p>
         <small>{myCV.position}</small>
       </aside>
-      <section>
+      <section className='cv__details'>
         <h2>Experience</h2>
         <ul>
           {myCV.experience.map((experience) => (
