@@ -1,18 +1,22 @@
-import { myCV } from '../data';
+import { CV_Personal } from '../types';
 
-const Aside = () => {
+type Props = {
+    data: CV_Personal
+}
+
+const Aside = ({data}: Props) => {
   return (
     <aside className='cv__personal'>
       <h2>Personal Data</h2>
       <img
         className='cv__personal-myPhoto'
-        src={myCV.photo}
-        alt={`${myCV.name} ${myCV.lastName} profile photo`}
+        src={data.photo}
+        alt={`${name} ${data.lastName} profile photo`}
       />
       <p>
-        {myCV.name} {myCV.lastName}
+        {data.name} {data.lastName}
       </p>
-      <small>{myCV.position}</small>
+      <small>{data.position}</small>
     </aside>
   );
 };
