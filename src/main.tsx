@@ -1,10 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.scss'
-import App from './App.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Header } from './Header/Header';
+import { Aside } from './Aside/Aside';
+import { Section } from './Section/Section';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <main className='cv'>
+      <Header />
+      <Aside />
+      <Section />
+    </main>
   </React.StrictMode>,
-)
+);

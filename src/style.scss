@@ -1,0 +1,60 @@
+$main-gap: 20px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans';
+}
+
+ul {
+  margin-bottom: 40px;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+h2 {
+  margin-bottom: $main-gap;
+}
+
+.cv {
+  max-width: 850px;
+  width: 100%;
+  min-height: 80vh;
+  margin: 0 auto;
+  display: grid;
+
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+
+  &__header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding: $main-gap;
+    text-align: center;
+  }
+
+  &__personal {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: $main-gap;
+    background-color: #eee;
+    text-align: center;
+
+    &-myPhoto {
+      width: 100%;
+      border-radius: 50%;
+      margin: $main-gap 0;
+    }
+  }
+
+  &__details {
+    padding: $main-gap;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #dde;
+    text-align: center;
+  }
+}
